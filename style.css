@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variant-numeric: oldstyle-nums;
+}
+
+h1{
+  font-size: 4rem;
+  line-height: 3rem;
+}
+
+.regular{font-variant-numeric: normal;}
+
+.ordinal{font-variant-numeric: ordinal;}
+
+.slashed-zero{font-variant-numeric: slashed-zero;}
+
+.lining-nums{font-variant-numeric: lining-nums;} /* <numeric-figure-values> */
+
+.oldstyle-nums{
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+  color: blue;
+
+} 
+
+  /* <numeric-figure-values> */
+
+.proportional-nums{font-variant-numeric: proportional-nums;} /* <numeric-spacing-values> */
+
+.tabular-nums{font-variant-numeric: tabular-nums;} /* <numeric-spacing-values> */
+
+.diagonal-fractions{font-variant-numeric: diagonal-fractions;} /* <numeric-fraction-values> */
+
+.stacked-fractions{font-variant-numeric: stacked-fractions;} /* <numeric-fraction-values> */
+
+.oldstyle-nums stacked-fractions{font-variant-numeric: oldstyle-nums stacked-fractions;}
+
+/* Global values */
+.inherit{font-variant-numeric: inherit;}
+
+.initial{font-variant-numeric: initial;}
+
+.revert{font-variant-numeric: revert;}
+
+.revert-layer{font-variant-numeric: revert-layer;}
+
+.unset{font-variant-numeric: unset;}
