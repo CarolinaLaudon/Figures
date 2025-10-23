@@ -13,42 +13,74 @@ h1{
   line-height: 3rem;
 }
 
+/* Decimal Digits e.g. zero. This is the default setting for numbers */
+/* Feature Setting = lnum. */
 .regular{
   font-variant-numeric: normal;
 }
 
+/* Ordinal markers are small upplifted letters, e.g. 1st. */
+/* Feature Setting = ordn. */
 .ordinal{
   font-variant-numeric: ordinal;
+}
+
+/* Superscripts, e.g. 2km2. */
+.superscript { 
+    font-variant-position: super;
 }
 
 .slashed-zero{
   font-variant-numeric: slashed-zero;
 }
 
+
+/* Lining Figures e.g. zero.lf. All numbers have same height. */
+/* Feature Setting = lnum. */
 .lining-nums{
   font-variant-numeric: lining-nums;
 } /* <numeric-figure-values> */
 
+/* Same as Lining Figures e.g. zero.lf. All numbers have same height. */
+/* Feature Setting = pnum. */
+.proportional-nums{
+  font-variant-numeric: proportional-nums;
+} /* <numeric-spacing-values> */
+ 
+/* Tabular Figures e.g. zero.tf. All numbers have same height. Monospaced. */
+/* Feature Setting = tnum. Specially made for tables. */
+.tabular-nums{
+  font-variant-numeric: tabular-nums;
+} /* <numeric-spacing-values> */
+
+
+/* Oldstyle Figures e.g. zero.osf. All numbers have same height as Lowercase. */
+/* Feature Setting = onum. */
 .oldstyle-nums{
   font-variant-numeric: oldstyle-nums;
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
   font-feature-settings: "onum";
-} 
+} /* <numeric-figure-values> */
 
-  /* <numeric-figure-values> */
 
-.proportional-nums{
-  font-variant-numeric: proportional-nums;
-} /* <numeric-spacing-values> */
-
-.tabular-nums{
-  font-variant-numeric: tabular-nums;
-} /* <numeric-spacing-values> */
 
 .diagonal-fractions{
   font-variant-numeric: diagonal-fractions;
 } /* <numeric-fraction-values> */
+
+.fraction {
+    font-feature-settings: frac;
+}
+
+@supports (font-variant-numeric: diagonal-fractions) {
+  .fraction {
+      font-feature-settings: frac;
+      font-variant-numeric: diagonal-fractions;
+  }
+}
+
+
 
 .stacked-fractions{
   font-variant-numeric: stacked-fractions;
