@@ -66,9 +66,7 @@ h1{
 
 /* Tabular Oldstyle Figures e.g. zero.tosf. All numbers have same height as Lowercase. */
 /* Glyph Suffix = .tosf */
-
-
-
+/* No support on the web as I know it today */
 
 /* FRACTIONS */
 
@@ -104,6 +102,12 @@ h1{
 
 /* MATHEMATICAL NUMERALS */
 
+/* Ordinal markers are small upplifted letters, e.g. 1st. */
+.ordinal{
+  font-variant-numeric: ordinal;
+  font-feature-settings: "ordn";
+}
+
 /* Numerator. */
 /* Feature Setting = numr. */
 /* Double check font-var */
@@ -115,13 +119,6 @@ h1{
 /* Double check font-var */
 .altfraction {
     font-feature-settings: dnom;
-}
-
-
-/* Ordinal markers are small upplifted letters, e.g. 1st. */
-.ordinal{
-  font-variant-numeric: ordinal;
-  font-feature-settings: "ordn";
 }
 
 /* Superscripts, e.g. 2km2. */
@@ -139,7 +136,7 @@ h1{
 }
 
 
-
+/* OTHERS GLOBAL VALUES */
 /* Global values */
 .inherit{
   font-variant-numeric: inherit;
