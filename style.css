@@ -1,3 +1,5 @@
+/* OpenType fonts can have up to ten different built-in figure styles. This guide explains what they are, where to find them, and when to use them.*/
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
 body{
@@ -19,15 +21,11 @@ h1{
   font-variant-numeric: normal;
 }
 
-/* Ordinal markers are small upplifted letters, e.g. 1st. */
-/* Feature Setting = ordn. */
-.ordinal{
-  font-variant-numeric: ordinal;
-}
-
-/* Superscripts, e.g. 2km2. */
-.superscript { 
-    font-variant-position: super;
+/* To access stylistic Settings */
+.ss01 {
+  -moz-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
 }
 
 .slashed-zero{
@@ -35,52 +33,66 @@ h1{
 }
 
 
-/* Lining Figures e.g. zero.lf. All numbers have same height. */
-/* Feature Setting = lnum. */
+/* UPPERCASE NUMBERS */
+/* Proportional Lining Figures. All numbers have same height. */
+/* Glyph Suffix = .lf */
 .lining-nums{
   font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
 } /* <numeric-figure-values> */
 
-/* Same as Lining Figures e.g. zero.lf. All numbers have same height. */
-/* Feature Setting = pnum. */
+/* Proportional Lining Figures. All numbers have same height. */
+/* Glyph Suffix = ? */
 .proportional-nums{
   font-variant-numeric: proportional-nums;
+  font-feature-settings: "pnum";
 } /* <numeric-spacing-values> */
  
-/* Tabular Figures e.g. zero.tf. All numbers have same height. Monospaced. */
-/* Feature Setting = tnum. Specially made for tables. */
+/* Tabular Lining Figures. Same height as Uppercase/small caps. Monospaced. */
+/* Specially made for tables. Glyph Suffix = .tf */
 .tabular-nums{
   font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
 } /* <numeric-spacing-values> */
 
 
-/* Oldstyle Figures e.g. zero.osf. All numbers have same height as Lowercase. */
-/* Feature Setting = onum. */
+/* LOWERCASE NUMBERS */
+/* Proportional Oldstyle Figures. Same height as Lowercase. */
+/* Glyph Suffix = .osf */
 .oldstyle-nums{
   font-variant-numeric: oldstyle-nums;
-  -moz-font-feature-settings: "onum";
-  -webkit-font-feature-settings: "onum";
   font-feature-settings: "onum";
 } /* <numeric-figure-values> */
 
+/* Tabular Oldstyle Figures e.g. zero.tosf. All numbers have same height as Lowercase. */
+/* Glyph Suffix = .tosf */
 
 
-.diagonal-fractions{
+
+
+/* FRACTIONS */
+
+/* Feature Setting = frac. */
+/* This feature replaces figures separated by a slash with common (diagonal) fractions. */ 
+.fraction {
   font-variant-numeric: diagonal-fractions;
+  font-feature-settings: frac;
 } /* <numeric-fraction-values> */
 
-.fraction {
-    font-feature-settings: frac;
+/* Alternative Fractions. */
+/* Feature Setting = afrc. */
+/* Double check font-var */
+.altfraction {
+    font-feature-settings: afrc;
 }
 
+/* Check if font contains fractions */
 @supports (font-variant-numeric: diagonal-fractions) {
   .fraction {
       font-feature-settings: frac;
       font-variant-numeric: diagonal-fractions;
   }
 }
-
-
 
 .stacked-fractions{
   font-variant-numeric: stacked-fractions;
@@ -89,6 +101,44 @@ h1{
 .oldstyle-nums stacked-fractions{
   font-variant-numeric: oldstyle-nums stacked-fractions;
 }
+
+/* MATHEMATICAL NUMERALS */
+
+/* Numerator. */
+/* Feature Setting = numr. */
+/* Double check font-var */
+.altfraction {
+    font-feature-settings: numr;
+}
+/* Denominator. */
+/* Feature Setting = dnom. */
+/* Double check font-var */
+.altfraction {
+    font-feature-settings: dnom;
+}
+
+
+/* Ordinal markers are small upplifted letters, e.g. 1st. */
+.ordinal{
+  font-variant-numeric: ordinal;
+  font-feature-settings: "ordn";
+}
+
+/* Superscripts, e.g. 2km2. */
+/* Feature Setting = sups. */
+.superscript { 
+    font-variant-position: super;
+    font-feature-settings: "sups";
+}
+
+/* Superscripts, e.g. 2km2. */
+/* Double check font-var */
+.superbscript { 
+    font-variant-position: sub;
+    font-feature-settings: "subs";
+}
+
+
 
 /* Global values */
 .inherit{
