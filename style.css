@@ -32,41 +32,32 @@ h1{
   font-variant-numeric: slashed-zero;
 }
 
-
-/* UPPERCASE NUMBERS */
-/* Proportional Lining Figures. All numbers have same height. */
-/* Glyph Suffix = .lf */
+/* UPPERCASE FIGURES (lnum) */
+/* Proportional Lining Figures. */
 .lining-nums{
   font-variant-numeric: lining-nums;
-  font-feature-settings: "lnum";
+  font-feature-settings: "lnum"; "pnum";
 } /* <numeric-figure-values> */
-
-/* Proportional Lining Figures. All numbers have same height. */
-/* Glyph Suffix = ? */
-.proportional-nums{
-  font-variant-numeric: proportional-nums;
-  font-feature-settings: "pnum";
-} /* <numeric-spacing-values> */
  
-/* Tabular Lining Figures. Same height as Uppercase/small caps. Monospaced. */
-/* Specially made for tables. Glyph Suffix = .tf */
+/* Tabular Lining Figures. */
 .tabular-nums{
   font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
+  font-feature-settings: "lnum"; "tnum";
 } /* <numeric-spacing-values> */
 
 
-/* LOWERCASE NUMBERS */
-/* Proportional Oldstyle Figures. Same height as Lowercase. */
-/* Glyph Suffix = .osf */
+/* LOWERCASE FIGURES (onum) */
+/* Proportional Oldstyle Figures.*/
 .oldstyle-nums{
   font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum";
+  font-feature-settings: "onum"; "pnum";
 } /* <numeric-figure-values> */
 
-/* Tabular Oldstyle Figures e.g. zero.tosf. All numbers have same height as Lowercase. */
-/* Glyph Suffix = .tosf */
-/* No support on the web as I know it today */
+/* Tabular Oldstyle Figures */
+.oldstyle-tab-nums{
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "onum"; "tnum";
+} /* <numeric-figure-values> */
 
 /* FRACTIONS */
 
@@ -108,13 +99,13 @@ h1{
   font-feature-settings: "ordn";
 }
 
-/* Numerator. */
+/* Numerator. Touching Cap-height.*/
 /* Feature Setting = numr. */
 /* Double check font-var */
 .altfraction {
     font-feature-settings: numr;
 }
-/* Denominator. */
+/* Denominator. On the baseline. */
 /* Feature Setting = dnom. */
 /* Double check font-var */
 .altfraction {
@@ -128,12 +119,19 @@ h1{
     font-feature-settings: "sups";
 }
 
-/* Superscripts, e.g. 2km2. */
-/* Double check font-var */
-.superbscript { 
+/* Subscripts, e.g. H₂O.  */
+.subscript { 
     font-variant-position: sub;
     font-feature-settings: "subs";
 }
+
+/* Scientific Inferior, e.g. H₂O. */
+/* Older version of Subscripts above*/
+.scientificInferior { 
+    font-feature-settings: "sinf";
+}
+
+
 
 
 /* OTHERS GLOBAL VALUES */
