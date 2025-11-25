@@ -1,13 +1,12 @@
 /* OpenType fonts can have up to ten different built-in figure styles. This guide explains what they are, where to find them, and when to use them.*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-  font-family: "Roboto", serif;
+  font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
-  font-variant-numeric: oldstyle-nums;
 }
 
 h1{
