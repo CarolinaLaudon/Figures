@@ -1,9 +1,9 @@
 /* OpenType fonts can have up to ten different built-in figure styles. This guide explains what they are, where to find them, and when to use them.*/
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-  font-family: "Alegreya", serif;
+  font-family: "Roboto", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -34,29 +34,29 @@ h1{
 
 /* UPPERCASE FIGURES (lnum) */
 /* Proportional Lining Figures. */
-.lining-nums{
+.lnum{
   font-variant-numeric: lining-nums;
-  font-feature-settings: "lnum"; "pnum";
+  font-feature-settings: "lnum", "pnum";
 } /* <numeric-figure-values> */
  
 /* Tabular Lining Figures. */
-.tabular-nums{
+.tnum{
   font-variant-numeric: tabular-nums;
-  font-feature-settings: "lnum"; "tnum";
+  font-feature-settings: "lnum", "tnum";
 } /* <numeric-spacing-values> */
 
 
 /* LOWERCASE FIGURES (onum) */
 /* Proportional Oldstyle Figures.*/
-.oldstyle-nums{
+.onum{
   font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum"; "pnum";
+  font-feature-settings: "onum", "pnum";
 } /* <numeric-figure-values> */
 
 /* Tabular Oldstyle Figures */
-.oldstyle-tab-nums{
+.tonum{
   font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum"; "tnum";
+  font-feature-settings: "onum", "tnum";
 } /* <numeric-figure-values> */
 
 /* FRACTIONS */
@@ -71,7 +71,7 @@ h1{
 /* Alternative Fractions. */
 /* Feature Setting = afrc. */
 /* Double check font-var */
-.altfraction {
+.afrc {
     font-feature-settings: afrc;
 }
 
