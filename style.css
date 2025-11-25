@@ -94,7 +94,7 @@ h1{
 /* MATHEMATICAL NUMERALS */
 
 /* Ordinal markers are small upplifted letters, e.g. 1st. */
-.ordinal{
+.ordn{
   font-variant-numeric: ordinal;
   font-feature-settings: "ordn";
 }
@@ -102,32 +102,32 @@ h1{
 /* Numerator. Touching Cap-height.*/
 /* Feature Setting = numr. */
 /* Double check font-var */
-.altfraction {
+.numr {
     font-feature-settings: numr;
 }
 /* Denominator. On the baseline. */
 /* Feature Setting = dnom. */
 /* Double check font-var */
-.altfraction {
+.dnom {
     font-feature-settings: dnom;
 }
 
 /* Superscripts, e.g. 2km2. */
 /* Feature Setting = sups. */
-.superscript { 
+.sups { 
     font-variant-position: super;
     font-feature-settings: "sups";
 }
 
 /* Subscripts, e.g. H₂O.  */
-.subscript { 
+.subs { 
     font-variant-position: sub;
     font-feature-settings: "subs";
 }
 
 /* Scientific Inferior, e.g. H₂O. */
 /* Older version of Subscripts above*/
-.scientificInferior { 
+.sinf { 
     font-feature-settings: "sinf";
 }
 
